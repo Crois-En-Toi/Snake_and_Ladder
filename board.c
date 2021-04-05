@@ -4,8 +4,8 @@
 #include <assert.h>
 
 
-#define SNAKE_NUM 10
-#define LADDER_NUM 7
+#define SNAKE_NUM 4
+#define LADDER_NUM 4
 
 //Tiles Structure
 struct tiles{
@@ -25,7 +25,7 @@ struct board{
     Tiles game_board[10][10];
 };
 
-Board* new_board(int **snakes_array, int **ladder_array)
+Board *new_board(int snakes_array[2][SNAKE_NUM], int ladder_array[2][LADDER_NUM])
 {
     Board* new = malloc(sizeof(*new));
     assert(new!=NULL);
@@ -46,6 +46,12 @@ Board* new_board(int **snakes_array, int **ladder_array)
                     new->game_board[i][j].snake_start = snakes_array[0][k];
                     new->game_board[i][j].snake_end = snakes_array[1][k];
                 }
+                else
+                {
+                    new->game_board[i][j].snake_start = 0;
+                    new->game_board[i][j].snake_end = 0;
+                }
+
             }
 
             //tile is laddeR?
@@ -56,6 +62,12 @@ Board* new_board(int **snakes_array, int **ladder_array)
                     new->game_board[i][j].ladder_start = ladder_array[0][k];
                     new->game_board[i][j].ladder_end = ladder_array[1][k];
                 }
+                else 
+                {
+                    new->game_board[i][j].ladder_start = 0;
+                    new->game_board[i][j].ladder_end = 0;
+                }
+
             }
 
             //all tiles players are null
