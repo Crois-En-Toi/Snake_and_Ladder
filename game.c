@@ -7,8 +7,6 @@
 #include<assert.h>
 #include"snake_and_ladder.h"
 
-
-
 int main()
 {
 
