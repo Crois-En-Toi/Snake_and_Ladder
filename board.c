@@ -45,6 +45,7 @@ Board *new_board(int snakes_array[2][SNAKE_NUM], int ladder_array[2][LADDER_NUM]
                 {
                     new->game_board[i][j].snake_start = snakes_array[0][k];
                     new->game_board[i][j].snake_end = snakes_array[1][k];
+                    break;
                 }
                 else
                 {
@@ -61,6 +62,7 @@ Board *new_board(int snakes_array[2][SNAKE_NUM], int ladder_array[2][LADDER_NUM]
                 {
                     new->game_board[i][j].ladder_start = ladder_array[0][k];
                     new->game_board[i][j].ladder_end = ladder_array[1][k];
+                    break;
                 }
                 else 
                 {

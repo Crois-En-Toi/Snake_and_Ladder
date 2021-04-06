@@ -12,8 +12,8 @@ int snake_cords[2][4];
 
 //Tiles Structure
 struct tiles{
-    char* player1;
-    char* player2;
+    int player1;
+    int player2;
     int snake_start;
     int snake_end;
     int ladder_start;
@@ -77,8 +77,8 @@ void test_board()
             printf("snake Cordinates : %d \t %d\n",test_board->game_board[i][j].snake_start,test_board->game_board[i][j].snake_end);
 
             printf("ladder Cordinates : %d \t %d\n",test_board->game_board[i][j].ladder_start,test_board->game_board[i][j].ladder_end); 
-            
-            assert(test_board->game_board[i][j].player1==NULL);
+            printf("hululululu %d\n",test_board->game_board[i][j].player1);  
+            assert(test_board->game_board[i][j].player1==0);
         }
     }
 }
