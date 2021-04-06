@@ -184,5 +184,3 @@ int get_ladder_end(Board *board, int coordinate)
     
     return board->game_board[i][j].ladder_end;
 }
-
-
