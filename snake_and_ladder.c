@@ -8,10 +8,10 @@
 
 #define NAME 100
 
-int snake_cords[2][SNAKE_NUM] = {(98,85,80,74,71,49,35,30,28,21),
-                                   (16,12,50,30,40,5,15,10,18,2)};
-int ladder_cords[2][LADDER_NUM]= {(14,17,24,38,53,60,70)
-                                 ,(51,63,78,52,69,83,89)};
+int snake_cords[2][SNAKE_NUM] = {{98,85,80,74,71,49,35,30,28,21},
+                                   {16,12,50,30,40,5,15,10,18,2}};
+int ladder_cords[2][LADDER_NUM]= {{14,17,24,38,53,60,70}
+                                 ,{51,63,78,52,69,83,89}};
 
 
 char player1[NAME];
@@ -24,7 +24,22 @@ void start_game()
 {
     printf("creating a board to play\n");
     Board *game_board = new_board(snake_cords,ladder_cords);
+
+    display_board(game_board);
+    printf("\n");
+    printf("The Game is Starting .. ... .. .\n");
+    printf("\n\n");
+
+    int player1_position=0;
+    int player2_position=0;
+    set_player_coordinate(game_board, 0 ,0 ,1);
+    set_player_coordinate(game_board, 0 ,0 ,2);
     
+    while((player1_position==100) || (player2_position==100))
+    {
+        //todo
+    }
+
     
 }
 
@@ -65,7 +80,37 @@ void display_userlogin()
 
 void display_board(Board *board)
 {
-    
+    //borders
+    for(int i=0; i<10; i++)
+    {
+        printf("--------");
+    }
+    printf("\n");
+    for(int i=0; i<100; i++)
+    {
+        if(is_snake(board, i))
+        {
+            printf("~~*\t");
+        }
+        else if(is_ladder(board, i))
+        {
+            printf("\\-\\\t");
+            
+        }
+        else{
+            printf("%d\t", i);
+        }
+        if((i+1)%10==0 && i!=0)
+        {
+            printf("\n");
+        }
+    }
+      //borders
+    for(int i=0; i<10; i++)
+    {
+        printf("--------");
+    }
+    printf("\n");
 }
 
 

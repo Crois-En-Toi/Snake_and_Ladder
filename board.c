@@ -79,3 +79,83 @@ Board *new_board(int snakes_array[2][SNAKE_NUM], int ladder_array[2][LADDER_NUM]
 
     return new;
 }
+
+
+//access various members of board through abstraction
+
+
+int is_snake(Board * board, int coord)
+{
+    //code for i,j
+    int i=0,j=0;
+    j=coord%10;
+    i=(int)coord/10;
+    //code for i,j
+
+    if(coord == 0)
+    {
+        return 0;
+    }
+
+    if(board->game_board[i][j].snake_start == coord)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int is_ladder(Board * board, int coord)
+{
+    //code for i,j
+    int i=0,j=0;
+    j=coord%10;
+    i=(int)coord/10;
+    //code for i,j
+
+    if(coord == 0)
+    {
+        return 0;
+    }
+
+    if(board->game_board[i][j].ladder_start == coord)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+void set_player_coordinate(Board* board, int coord_prev,int coord_next, int player_num)
+{
+     //code for i,j
+    int i=0,j=0;
+    j=coord_prev%10;
+    i=(int)coord_prev/10;
+    //code for i,j
+
+    if(player_num == 1)
+    {
+        board->game_board[i][j].player1=0;
+    }
+    else
+    {
+        board->game_board[i][j].player2=0;
+    }
+
+
+    //code for i,j
+    int i=0,j=0;
+    j=coord_next%10;
+    i=(int)coord_next/10;
+    //code for i,j
+
+    if(player_num == 1)
+    {
+        board->game_board[i][j].player1=1;
+    }
+    else
+    {
+        board->game_board[i][j].player2=1;
+    }    
+}

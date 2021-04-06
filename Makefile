@@ -15,4 +15,4 @@ board.o: board.c board.h
 	gcc -g -c board.c
 
 clean:
-	rm test.o board.o Test_game
+	rm test.o board.o Test_game snake_and_ladder.o game.o Game 
