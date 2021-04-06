@@ -1,11 +1,10 @@
 #include "board.h"
+#include "snake_and_ladder.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
 
-
-#define SNAKE_NUM 4
-#define LADDER_NUM 4
 
 //Tiles Structure
 struct tiles{

@@ -1,8 +1,7 @@
 #ifndef BOARD_H
 #define BOARD_H
-
-#define SNAKE_NUM 4
-#define LADDER_NUM 4
+#define SNAKE_NUM 10
+#define LADDER_NUM 7
 
 typedef struct board Board;
 

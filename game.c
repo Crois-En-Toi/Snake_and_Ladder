@@ -6,9 +6,9 @@
 #include <stdlib.h>
 #include <assert.h>
 #include "snake_and_ladder.h"
+#include "board.h"
 
 void display();
-void start_game();
 void how_to_play();
 
 int main()
@@ -18,7 +18,6 @@ int main()
    {
       //start cover title of the game
       display();
-      int menu;
       scanf("%d", &menu);
       printf("\n");
 
@@ -27,14 +26,17 @@ int main()
       {
          return 0;
       }
-      else
+      else if(menu == 2)
       {
          how_to_play();
       }
+      else
+        {
+            display_userlogin();
+        }
    }
 
-   //starting game :)
-   start_game();
+   
 }
 
 //cover title start game and how to play
@@ -76,7 +78,3 @@ void how_to_play()
    fclose(file_pointer);
 }
 
-void start_game()
-{
-   printf("ok\n");
-}
