@@ -9,8 +9,8 @@
 
 //Tiles Structure
 struct tiles{
-    char* player1;
-    char* player2;
+    int player1;
+    int player2;
     int snake_start;
     int snake_end;
     int ladder_start;
@@ -71,8 +71,8 @@ Board *new_board(int snakes_array[2][SNAKE_NUM], int ladder_array[2][LADDER_NUM]
             }
 
             //all tiles players are null
-            new->game_board[i][j].player1=NULL;
-            new->game_board[i][j].player2=NULL;
+            new->game_board[i][j].player1= 0;
+            new->game_board[i][j].player2= 0;
         }
     }
 
