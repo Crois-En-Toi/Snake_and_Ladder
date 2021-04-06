@@ -128,12 +128,17 @@ int is_ladder(Board * board, int coord)
 
 void set_player_coordinate(Board* board, int coord_prev,int coord_next, int player_num)
 {
-     //code for i,j
+    if(coord_next>99)
+    {
+        coord_next==coord_prev;
+    }
+
+    //code for i,j
     int i=0,j=0;
     j=coord_prev%10;
     i=(int)coord_prev/10;
     //code for i,j
-
+    
     if(player_num == 1)
     {
         board->game_board[i][j].player1=0;
@@ -145,7 +150,7 @@ void set_player_coordinate(Board* board, int coord_prev,int coord_next, int play
 
 
     //code for i,j
-    int i=0,j=0;
+    i=0,j=0;
     j=coord_next%10;
     i=(int)coord_next/10;
     //code for i,j
@@ -159,3 +164,25 @@ void set_player_coordinate(Board* board, int coord_prev,int coord_next, int play
         board->game_board[i][j].player2=1;
     }    
 }
+
+int get_snake_tail(Board *board, int coordinate)
+{
+    //code for i,j
+    int i=0,j=0;
+    j=coordinate%10;
+    i=(int)coordinate/10;
+    
+    return board->game_board[i][j].snake_end;
+}
+
+int get_ladder_end(Board *board, int coordinate)
+{
+    //code for i,j
+    int i=0,j=0;
+    j=coordinate%10;
+    i=(int)coordinate/10;
+    
+    return board->game_board[i][j].ladder_end;
+}
+
+

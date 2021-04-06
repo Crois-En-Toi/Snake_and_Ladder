@@ -12,11 +12,19 @@ int snake_cords[2][SNAKE_NUM] = {{98,85,80,74,71,49,35,30,28,21},
                                    {16,12,50,30,40,5,15,10,18,2}};
 int ladder_cords[2][LADDER_NUM]= {{14,17,24,38,53,60,70}
                                  ,{51,63,78,52,69,83,89}};
+void main_logic(Board *gboard,int usr_inp);
 
 
 char player1[NAME];
 char player2[NAME];
 char password[NAME];
+
+
+int usr_input;
+int player1_position=0;
+int player2_position=0;
+int player_turn = 0;
+int roll_value;
 
 
 //Main snake and ladder logic functions 
@@ -29,16 +37,46 @@ void start_game()
     printf("\n");
     printf("The Game is Starting .. ... .. .\n");
     printf("\n\n");
-
-    int player1_position=0;
-    int player2_position=0;
+    
     set_player_coordinate(game_board, 0 ,0 ,1);
     set_player_coordinate(game_board, 0 ,0 ,2);
-    
-    while((player1_position==100) || (player2_position==100))
+    while((player1_position!=99) || (player2_position!=99))
     {
         //todo
+        if(player_turn==0)
+        {
+            printf("ITS YOUR TURN %s\n",player1);
+            display_gameview();
+            scanf("%d",&usr_input);
+            
+            main_logic(game_board,usr_input);
+            player_turn++;
+        }
+        else
+        {
+            printf("ITS YOUR TURN %s\n",player2,usr_input);
+            display_gameview();
+            scanf("%d",&usr_input);
+            main_logic(game_board,usr_input);
+            player_turn--;
+        }
+
+        
     }
+      
+    if(player1_position==99)
+    {
+        printf("%s is the winner \n",player1);
+
+    }
+    else
+    {
+        printf("%s is the winner \n",player2);
+
+    }
+
+
+
 
     
 }
@@ -113,13 +151,83 @@ void display_board(Board *board)
     printf("\n");
 }
 
+int roll_dice()
+{
+    return 1 + rand() % 6; 
+}
 
+void display_gameview()
+{
+    printf("=============\n");
+    printf("1.Roll Dice\n");
+    printf("2.print Log\n");
+    printf("3.Exit :/\n");
 
+}
 
+void main_logic(Board *gboard,int usr_inp)
+{
+     if(player_turn==0)
+     {
+         if(usr_inp==1)
+        {
+         roll_value=roll_dice();
+         roll_value= player1_position + roll_value;
+         if(roll_value>99)
+         {
+              roll_value=player1_position;
 
+         }
+         else if(is_snake(gboard,roll_value))
+         {
+           set_player_coordinate(gboard,player1_position,get_snake_tail(gboard,roll_value),1);
+           player1_position = get_snake_tail(gboard,roll_value);
+         }
+         else if(is_ladder(gboard,roll_value))
+         {
+           set_player_coordinate(gboard,player1_position,get_ladder_end(gboard,roll_value),1);
+           player1_position = get_ladder_end(gboard,roll_value);
+         }
+         else
+         {
+             set_player_coordinate(gboard,player1_position,roll_value,1);
+          
+         }
+     }
+    else
+    {
+         if(usr_inp==1)
+        {
+         roll_value=roll_dice();
+         roll_value= player2_position + roll_value;
+         if(roll_value>99)
+         {
+              roll_value=player2_position;
 
+         }
+         else if(is_snake(gboard,roll_value))
+         {
+           set_player_coordinate(gboard,player2_position,get_snake_tail(gboard,roll_value),2);
+           player2_position = get_snake_tail(gboard,roll_value);
+         }
+         else if(is_ladder(gboard,roll_value))
+         {
+           set_player_coordinate(gboard,player2_position,get_ladder_end(gboard,roll_value),2);
+           player2_position = get_ladder_end(gboard,roll_value);
+         }
+         else
+         {
+             set_player_coordinate(gboard,player2_position,roll_value,1);
+          
+         }
+  
+         }
 
+    }
 
+  }
+
+}
 
 
 

@@ -13,4 +13,9 @@ int is_snake(Board * board, int coord);
 
 void set_player_coordinate(Board* board, int coord_prev,int coord_next, int player_num);
 
+int get_snake_tail(Board *board, int coordinate);
+
+int get_ladder_end(Board *board, int coordinate);
+
+
 #endif
