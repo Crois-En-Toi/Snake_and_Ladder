@@ -8,6 +8,8 @@
 void display_userlogin();
 void start_game();
 void display_board(Board *board);
+void print_log();
+void input_log(int player_num, Board* gboard);
  
 
 #endif

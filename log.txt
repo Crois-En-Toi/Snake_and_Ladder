@@ -1,0 +1,176 @@
+Sahil moved to coordinate: 0
+Prath moved to coordinate: 0
+
+
+Sahil moved to coordinate: 2
+Prath moved to coordinate: 5
+
+
+Sahil moved to coordinate: 6
+Prath moved to coordinate: 7
+
+
+Sahil moved to coordinate: 12
+Prath moved to coordinate: 9
+
+
+Sahil got a Ladder!! at 17 climbed up to 63
+Sahil moved to coordinate: 12
+Sahil got a Ladder!! at 17 climbed up to 63
+Sahil moved to coordinate: 63
+Prath moved to coordinate: 10
+
+
+Sahil moved to coordinate: 67
+Prath moved to coordinate: 12
+
+
+Sahil got a Ladder!! at 70 climbed up to 89
+Sahil moved to coordinate: 67
+Sahil got a Ladder!! at 70 climbed up to 89
+Sahil moved to coordinate: 89
+Prath got a Ladder!! at 70 climbed up to 89
+Prath moved to coordinate: 12
+
+
+Sahil moved to coordinate: 91
+Prath moved to coordinate: 15
+
+
+Sahil moved to coordinate: 91
+Prath got a Ladder!! at 17 climbed up to 63
+Prath moved to coordinate: 15
+
+
+Prath got a Ladder!! at 17 climbed up to 63
+Prath moved to coordinate: 63
+
+
+Sahil moved to coordinate: 97
+Prath moved to coordinate: 68
+
+
+Sahil got bit by snake!! at 98 fell to 16
+Sahil moved to coordinate: 97
+Sahil got bit by snake!! at 98 fell to 16
+Sahil moved to coordinate: 16
+Prath got bit by snake!! at 98 fell to 16
+Prath moved to coordinate: 68
+
+
+Sahil got a Ladder!! at 17 climbed up to 63
+Sahil moved to coordinate: 16
+Sahil got a Ladder!! at 17 climbed up to 63
+Sahil moved to coordinate: 63
+Prath moved to coordinate: 73
+
+
+Sahil moved to coordinate: 68
+Prath moved to coordinate: 79
+
+
+Sahil moved to coordinate: 68
+Prath moved to coordinate: 82
+
+
+Sahil moved to coordinate: 72
+Prath moved to coordinate: 86
+
+
+Sahil moved to coordinate: 75
+Prath moved to coordinate: 89
+
+
+Sahil moved to coordinate: 75
+Prath moved to coordinate: 92
+
+
+Sahil moved to coordinate: 77
+Prath moved to coordinate: 94
+
+
+Sahil moved to coordinate: 79
+Prath moved to coordinate: 94
+
+
+Sahil got bit by snake!! at 80 fell to 50
+Sahil moved to coordinate: 79
+Sahil got bit by snake!! at 80 fell to 50
+Sahil moved to coordinate: 50
+Prath moved to coordinate: 95
+
+
+Sahil moved to coordinate: 50
+Prath moved to coordinate: 96
+
+
+Sahil moved to coordinate: 56
+Prath moved to coordinate: 96
+
+
+Sahil moved to coordinate: 58
+Prath moved to coordinate: 96
+
+
+Sahil moved to coordinate: 58
+Prath moved to coordinate: 96
+
+
+Sahil got a Ladder!! at 60 climbed up to 83
+Sahil moved to coordinate: 58
+Sahil got a Ladder!! at 60 climbed up to 83
+Sahil moved to coordinate: 83
+Prath moved to coordinate: 96
+
+
+Sahil moved to coordinate: 87
+Prath moved to coordinate: 96
+
+
+Sahil moved to coordinate: 91
+Prath moved to coordinate: 96
+
+
+Sahil moved to coordinate: 94
+Prath got bit by snake!! at 98 fell to 16
+Prath moved to coordinate: 96
+
+
+Prath got bit by snake!! at 98 fell to 16
+Prath moved to coordinate: 16
+
+
+Sahil moved to coordinate: 97
+Prath moved to coordinate: 19
+
+
+Sahil moved to coordinate: 97
+Prath moved to coordinate: 20
+
+
+Sahil moved to coordinate: 97
+Prath moved to coordinate: 20
+
+
+Sahil moved to coordinate: 97
+Prath moved to coordinate: 22
+
+
+Sahil moved to coordinate: 97
+Prath moved to coordinate: 25
+
+
+Sahil moved to coordinate: 97
+Prath got bit by snake!! at 28 fell to 18
+Prath moved to coordinate: 25
+
+
+Prath got bit by snake!! at 28 fell to 18
+Prath moved to coordinate: 18
+
+
+Sahil moved to coordinate: 97
+Prath moved to coordinate: 23
+
+
+Sahil moved to coordinate: 99
