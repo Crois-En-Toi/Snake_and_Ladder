@@ -198,14 +198,14 @@ void main_logic(Board *gboard)
             }
             else if (is_snake(gboard, roll_value))
             {
-                input_log(1, gboard);
+                //input_log(1, gboard);
                 printf("%s got BIT BY SNAKE at %d fell to %d\n", player1,roll_value,get_snake_tail(gboard,roll_value));
                 set_player_coordinate(gboard, player1_position, get_snake_tail(gboard, roll_value), 1);
                 player1_position = get_snake_tail(gboard, roll_value);
             }
             else if (is_ladder(gboard, roll_value))
             {
-                input_log(1, gboard);
+                //input_log(1, gboard);
                 printf("%s TOOK a LADDER at %d climed up to %d\n", player1,roll_value,get_ladder_end(gboard,roll_value));
                 set_player_coordinate(gboard, player1_position, get_ladder_end(gboard, roll_value), 1);
                 player1_position = get_ladder_end(gboard, roll_value);
@@ -238,14 +238,12 @@ void main_logic(Board *gboard)
             }
             else if (is_snake(gboard, roll_value))
             {
-                input_log(2, gboard);
                 printf("%s got bit BY SNAKE at %d fell to %d\n", player2,roll_value,get_snake_tail(gboard,roll_value));
                 set_player_coordinate(gboard, player2_position, get_snake_tail(gboard, roll_value), 2);
                 player2_position = get_snake_tail(gboard, roll_value);
             }
             else if (is_ladder(gboard, roll_value))
             {
-                input_log(2, gboard);
                 printf("%s TOOK a LADDER at %d climed up to %d\n", player2,roll_value,get_ladder_end(gboard,roll_value));
                 set_player_coordinate(gboard, player2_position, get_ladder_end(gboard, roll_value), 2);
                 player2_position = get_ladder_end(gboard, roll_value);
@@ -259,7 +257,6 @@ void main_logic(Board *gboard)
 
         else if (user_input == 2)
         {
-            // printf("USER INPUT 2 HOGYA HAI BUT MEI PRINT NI KAREGA\n");
             print_log();
         }
         else if (user_input == 3)
@@ -272,7 +269,6 @@ void main_logic(Board *gboard)
 void print_log()
 {
 
-    //printf("Chodu print hona \n");
     FILE *file_pointer;
     char s;
     file_pointer = fopen("log.txt", "r");
@@ -317,8 +313,6 @@ void input_log(int player_num, Board *gboard)
         {
             snprintf(sentence, 1000, "%s got a Ladder!! at %d climbed up to %d\n", Name, roll_value, get_ladder_end(gboard, roll_value));
             fputs(sentence, file_ptr);  
-            // fclose(file_ptr);          
-            // return;
         }
     }
     else
@@ -329,16 +323,12 @@ void input_log(int player_num, Board *gboard)
         {
             snprintf(sentence, 1000, "%s got bit by snake!! at %d fell to %d\n", Name, roll_value, get_snake_tail(gboard, roll_value));
             fputs(sentence, file_ptr);
-            // fclose(file_ptr);
-            // return;
         }
         if (is_ladder(gboard, roll_value))
         {            
             
             snprintf(sentence, 1000, "%s got a Ladder!! at %d climbed up to %d\n", Name, roll_value, get_ladder_end(gboard, roll_value));
             fputs(sentence, file_ptr);
-            // fclose(file_ptr);
-            // return;
         }
     }
     snprintf(sentence, 1000, "%s moved to coordinate: %d", Name, pos);
