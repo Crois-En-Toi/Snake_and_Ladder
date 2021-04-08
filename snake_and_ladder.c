@@ -8,6 +8,7 @@
 
 #define NAME 100
 
+
 int snake_cords[2][SNAKE_NUM] = {{98, 85, 80, 74, 71, 49, 35, 30, 28, 21},
                                  {16, 12, 50, 30, 40, 5, 15, 10, 18, 2}};
 int ladder_cords[2][LADDER_NUM] = {{14, 17, 24, 38, 53, 60, 70},
@@ -25,6 +26,8 @@ int player_turn = 0;
 int roll_value;
 
 //Main snake and ladder logic functions
+
+//This function is called when game is about to start
 void start_game()
 {
     //DO NOT EVER TOUCH THIS
@@ -95,9 +98,10 @@ void start_game()
     }
 }
 
+//login functionality
 void display_userlogin()
 {
-
+    //This is the global password 
     char Global_password[] = "1234";
 
     printf("The game is about to start pls enter the names of players\n");
@@ -124,6 +128,7 @@ void display_userlogin()
     start_game();
 }
 
+//displays the real time board
 void display_board(Board *board)
 {
     //borders
@@ -171,11 +176,13 @@ void display_board(Board *board)
     printf("\n");
 }
 
+//Tells the roll value
 int roll_dice()
 {
     return 1 + rand() % 6;
 }
 
+//game menu
 void display_gameview()
 {
     printf("=============\n");
@@ -184,6 +191,7 @@ void display_gameview()
     printf("3.Exit :/\n");
 }
 
+//This is the core or main logic
 void main_logic(Board *gboard)
 {
     if (player_turn == 0)
@@ -265,7 +273,7 @@ void main_logic(Board *gboard)
         }
     }
 }
-
+//prints log stored in log.txt
 void print_log()
 {
 
@@ -288,7 +296,7 @@ void print_log()
 
     fclose(file_pointer);
 }
-
+//places the log in log.txt
 void input_log(int player_num, Board *gboard)
 {
     FILE *file_ptr = fopen("log.txt", "a");

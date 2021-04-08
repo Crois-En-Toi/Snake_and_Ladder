@@ -24,6 +24,7 @@ struct board{
     Tiles game_board[10][10];
 };
 
+//creates a Board to play 
 Board *new_board(int snakes_array[2][SNAKE_NUM], int ladder_array[2][LADDER_NUM])
 {
     Board* new = malloc(sizeof(*new));
@@ -83,7 +84,7 @@ Board *new_board(int snakes_array[2][SNAKE_NUM], int ladder_array[2][LADDER_NUM]
 
 //access various members of board through abstraction
 
-
+//checks whether there is a snake at the given cordinate
 int is_snake(Board * board, int coord)
 {
     //code for i,j
@@ -105,6 +106,7 @@ int is_snake(Board * board, int coord)
     return 0;
 }
 
+//checks whether there is a ladder at the given cordinate
 int is_ladder(Board * board, int coord)
 {
     //code for i,j
@@ -126,6 +128,7 @@ int is_ladder(Board * board, int coord)
     return 0;
 }
 
+//sets player value to correct coordinate after rolling dice
 void set_player_coordinate(Board* board, int coord_prev,int coord_next, int player_num)
 {
     if(coord_next>99)
@@ -165,8 +168,9 @@ void set_player_coordinate(Board* board, int coord_prev,int coord_next, int play
     }    
 }
 
+//spits out end of the snkae on the given coordinate
 int get_snake_tail(Board *board, int coordinate)
-{
+{   
     //code for i,j
     int i=0,j=0;
     j=coordinate%10;
@@ -175,6 +179,7 @@ int get_snake_tail(Board *board, int coordinate)
     return board->game_board[i][j].snake_end;
 }
 
+//spits out end of the ladder at the given coordinate
 int get_ladder_end(Board *board, int coordinate)
 {
     //code for i,j
