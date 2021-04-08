@@ -6,6 +6,7 @@
 #include "board.h"
 
 void display_userlogin();
+void display_gameview();
 void start_game();
 void display_board(Board *board);
 void print_log();
