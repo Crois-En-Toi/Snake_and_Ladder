@@ -1,3 +1,7 @@
 HOW TO PLAY:
 
+1. Run `make Game` in terminal
+2. Run `./Game` executable file
+3. Play the interactive Snake & Ladder Game
+
 Thank you Have fun :)
